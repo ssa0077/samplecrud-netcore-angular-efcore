@@ -1,0 +1,1 @@
+# mojsampletest-netcore-angular-efcore
