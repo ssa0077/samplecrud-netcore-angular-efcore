@@ -1,1 +1,1 @@
-# mojsampletest-netcore-angular-efcore
+# samplecrud-netcore-angular-efcore
