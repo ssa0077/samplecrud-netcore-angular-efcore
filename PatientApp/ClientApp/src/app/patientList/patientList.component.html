@@ -1,0 +1,33 @@
+<h1>Patient Records</h1>
+
+<p *ngIf="!patientList"><em>Loading...</em></p>
+
+<p>
+  <a [routerLink]="['/register-patient']">Add New</a>
+</p>
+
+<table class='table' *ngIf="patientList">
+  <thead>
+    <tr>
+      <th>PatientId</th>
+      <th>Name</th>
+      <th>UniqueId</th>
+      <th>NokName</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pat of patientList">
+      <td>{{ pat.patientId }}</td>
+      <td>{{ pat.name }}</td>
+      <td>{{ pat.uniqueId }}</td>
+      <td>{{ pat.nokName }}</td>
+      <td>{{ pat.gender }}</td>
+      <td>
+      <td>
+        <a [routerLink]="['/patient/edit/', pat.patientId]">Edit</a> |
+        <a [routerLink]="" (click)="delete(pat.patientId)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
