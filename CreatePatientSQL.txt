@@ -1,0 +1,20 @@
+CREATE TABLE Patient (  
+PatientID int IDENTITY(1,1) NOT NULL PRIMARY KEY,  
+Name varchar(20) NOT NULL ,  
+UniqueID varchar(20) NOT NULL ,  
+NokName varchar(20) NOT NULL ,  
+Gender varchar(6) NOT NULL   
+)  
+GO  
+  
+
+Nuget Scripts
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Scaffold-DbContext "Server=DESKTOP-8PS1H35;Database=DoctorsDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Tables Patient
+
+Local Conn Strings
+
+Server=DESKTOP-8PS1H35;Database=DoctorsDB;Trusted_Connection=True;
+Server=DESKTOP-8PS1H35;Integrated Security=true;
